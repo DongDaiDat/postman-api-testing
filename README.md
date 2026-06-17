@@ -41,7 +41,7 @@ Trong bài thực hành, em đã tạo một collection trên Postman để ki�
 
 ### 4.5. Kiểm thử request POST
 
-![Runner Result](images/05_post_requests.png)
+![Runner Result](images/05_post_request.png)
 
 ## 5. Nhận xét
 
