@@ -31,15 +31,15 @@ Trong bài thực hành, em đã tạo một collection trên Postman để ki�
 
 ![GET Request](images/02_get_request.png)
 
-### 4.3. Kiểm thử request POST
+### 4.3. Kiểm thử request PUT
 
 ![POST Request](images/03_put_request.png)
 
-### 4.4. Viết test script và kiểm tra kết quả
+### 4.4. Kiểm thử request DELETE
 
 ![Tests Passed](images/04_delete_request.png)
 
-### 4.5. Chạy Collection Runner
+### 4.5. Kiểm thử request POST
 
 ![Runner Result](images/05_post_requests.png)
 
