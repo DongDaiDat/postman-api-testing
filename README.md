@@ -1,4 +1,4 @@
-# THỰC HÀNH LAB: KIỂM THỬ API TỰ ĐỘNG VỚI POSTMAN
+# THỰC HÀNH LAB 7: KIỂM THỬ API TỰ ĐỘNG VỚI POSTMAN
 
 **Thông tin sinh viên:**
 * **Họ và tên:** Đồng Đại Đạt  
@@ -29,7 +29,7 @@ Các tính năng chiến lược của Postman bao gồm:
 
 ## 3. NỘI DUNG THỰC HIỆN
 
-Trong phạm vi bài thực hành, một bộ sưu tập kiểm thử (*Test Collection*) đã được thiết lập để đánh giá và kiểm thử toàn diện các phương thức API CRUD cơ bản dựa trên các Endpoint sau:
+Trong phạm vi bài thực hành, một bộ sưu tập kiểm thử (*Test Collection*) đã được thiết lập để đánh giá và kiểm thử toàn diện các phương thức API CRUD cơ bản cùng các kỹ thuật nâng cao dựa trên các Endpoint sau:
 
 | STT | Phương thức | API Endpoint | Mục tiêu kiểm thử |
 | :---: | :---: | :--- | :--- |
@@ -37,6 +37,9 @@ Trong phạm vi bài thực hành, một bộ sưu tập kiểm thử (*Test Col
 | 2 | **PUT** | `/api/users/2` | Gửi dữ liệu cập nhật và xác minh thay đổi thông tin người dùng. |
 | 3 | **DELETE** | `/api/users/2` | Thực hiện yêu cầu xóa tài khoản người dùng khỏi hệ thống. |
 | 4 | **POST** | `/api/users` | Khởi tạo dữ liệu người dùng mới lên hệ thống cơ sở dữ liệu. |
+| 5 | **GET** | `/api/users?delay=3` | Kiểm thử phản hồi trễ (*Delayed Response*) để đánh giá khả năng xử lý bất đồng bộ hoặc timeout của hệ thống. |
+| 6 | **GET** | `/api/users?page=2` | Kiểm thử phân trang (*Pagination*) nhằm xác minh tính chính xác của cấu trúc phân phối dữ liệu theo trang. |
+| 7 | **Xác thực** | *(JSON Schema)* | Thực hiện xác thực kiểu dữ liệu (*Data Type Validation*) trong JSON Response để đảm bảo tính toàn vẹn của dữ liệu thuộc tính. |
 
 ---
 
@@ -69,13 +72,28 @@ Dưới đây là các hình ảnh ghi nhận thực tế quá trình cấu hìn
 
 ![POST Request](images/05_post_request.png)
 
+### 4.6. Kiểm thử phản hồi trễ (Delayed Response)
+*Mô phỏng tình huống mạng chậm hoặc máy chủ xử lý tác vụ nặng, đo lường độ trễ thời gian thực.*
+
+![Delayed Response](images/06_Delayed%20Response.png)
+
+### 4.7. Kiểm thử dữ liệu phân trang (Pagination)
+*Xác thực tính chính xác của các tham số phân trang như `page`, `per_page`, `total`, đảm bảo dữ liệu hiển thị đúng phân đoạn.*
+
+![Pagination](images/07_Pagination.png)
+
+### 4.8. Xác thực kiểu dữ liệu (Data Type Validation)
+*Sử dụng Test Script nâng cao để kiểm tra tính hợp lệ của kiểu dữ liệu (String, Integer, Boolean,...) trong Object trả về.*
+
+![Data Type Validation](images/08_Data%20Type%20Validation.png)
+
 ---
 
 ## 5. ĐÁNH GIÁ VÀ NHẬN XÉT
 
 Thông qua quá trình thực hành thực tế, em đã gặt hái được các kết quả kỹ năng quan trọng:
 * Làm chủ phương thức vận hành và giao tiếp giữa Client - Server thông qua các giao thức thiết yếu `GET`, `POST`, `PUT`, `DELETE`.
-* Nâng cao tư duy kiểm thử phần mềm bằng việc tự viết các đoạn mã kịch bản kiểm thử (*Test Scripts*) bằng JavaScript để tự động xác thực mã trạng thái (*Status Code 200/201/204*), thời gian phản hồi (*Response Time Line*) và kiểm tra tính toàn vẹn của dữ liệu thuộc tính trong chuỗi JSON.
+* Nâng cao tư duy kiểm thử phần mềm bằng việc tự viết các đoạn mã kịch bản kiểm thử (*Test Scripts*) bằng JavaScript để tự động xác thực mã trạng thái (*Status Code*), thời gian phản hồi (*Response Time Line*), cũng như kiểm tra chuyên sâu về phân trang và kiểm tra kiểu dữ liệu (*Schema Validation*).
 * Biết cách tối ưu hóa hiệu suất làm việc bằng công cụ *Collection Runner*, tự động hóa chuỗi kiểm thử liên hoàn thay vì thao tác thủ công từng bước.
 
 ---
