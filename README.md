@@ -1,4 +1,4 @@
-# THỰC HÀNH LAB 7: KIỂM THỬ API TỰ ĐỘNG VỚI POSTMAN!
+# THỰC HÀNH LAB 7: KIỂM THỬ API TỰ ĐỘNG VỚI POSTMAN
 
 **Thông tin sinh viên:**
 * **Họ và tên:** Đồng Đại Đạt  
